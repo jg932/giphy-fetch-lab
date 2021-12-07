@@ -1,19 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-function Gif (props){
-  let url = ''
-  props.gif.data.forEach((element) => {
-    url = element.images.original.url
-  })
-
-  return (
+function Gif({gif}) {
+  return(
   <>
-  <img 
-  src={url}  
-  alt="gif"
-  />
+    <img src={gif.data.images.original.url} alt='gif' />
   </>
   )
 }
 
-export default Gif
+export default Gif;

@@ -15,19 +15,23 @@ function Form(props) {
     const search =  e.target.value
     setGifSearch(search)
   };
-
+  const refreshPage = ()=>{
+    window.location.reload();
+  }
     return (
       <>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="gifSearch"></label>
+  
           <input
-            placeholder="type of gif"
-            id="gifSearch"
             type="text"
             value={gifSearch}
+            placeholder= 'Type of giphy'
             onChange={handleChange}
           />
-          <input type="submit" value="Go Fetch" />
+          <input type="submit" value="Submit" />
+          <br></br>
+          < button onClick={refreshPage}> Make API Call Again</button>
+        <h1>Pull random gifs from Giphy</h1>
         </form>
       </>
     );
