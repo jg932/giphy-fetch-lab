@@ -9,7 +9,6 @@ function App() {
   const [gifSearch, setGifSearch]= useState('')
 
   const handleSubmit = search => {
-		console.log('App - makeApiCall - search', search[0]);
 		setGifSearch(search);
 };
   useEffect(() => {
@@ -29,7 +28,7 @@ function App() {
 			<h1>Giphy-Fetch-Lab</h1>
 			<Form handleSubmit={handleSubmit} />
 			{/* <Gif {giphyData.data ? <Giph giphy={giphyData} /> : null} /> */}
-			{gifData.data ? <Gif gif={gifData} /> : null}
+			{gifData ? <Gif gif={gifData} /> : null}
 		</div>
 	);
 }
